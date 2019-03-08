@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9td-2r-RRm">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="c4y-aS-E4S">
+            <objects>
+                <viewController id="9td-2r-RRm" customClass="ViewController" customModule="POC_QRCODE_GENERATOR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MSX-gz-1o6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type your text" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yUg-TT-rWD">
+                                <rect key="frame" x="2" y="22" width="371" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Jxx-tF-kV0"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjB-Tj-0nS">
+                                <rect key="frame" x="104" y="77" width="166" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="OF1-7T-qhj"/>
+                                    <constraint firstAttribute="width" constant="166" id="thv-64-nKX"/>
+                                </constraints>
+                                <state key="normal" title="Generate QR code"/>
+                                <connections>
+                                    <action selector="generateQR:" destination="9td-2r-RRm" eventType="touchUpInside" id="Lrd-B9-lwp"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="r6J-Ai-4Gv">
+                                <rect key="frame" x="112" y="181" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Gxs-KX-nRR"/>
+                                    <constraint firstAttribute="height" constant="150" id="c9e-SS-FUw"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVa-yu-uDs">
+                                <rect key="frame" x="139" y="387" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="GBU-nV-aPO"/>
+                                    <constraint firstAttribute="width" constant="97" id="bj4-fS-k8w"/>
+                                </constraints>
+                                <state key="normal" title="Save QR code"/>
+                                <connections>
+                                    <action selector="saveQR:" destination="9td-2r-RRm" eventType="touchUpInside" id="owv-0Y-k6h"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UVa-yu-uDs" firstAttribute="top" secondItem="r6J-Ai-4Gv" secondAttribute="bottom" constant="56" id="9NR-3o-vN7"/>
+                            <constraint firstItem="DMg-Xt-HJd" firstAttribute="trailing" secondItem="yUg-TT-rWD" secondAttribute="trailing" constant="2" id="A4T-e2-1Az"/>
+                            <constraint firstItem="r6J-Ai-4Gv" firstAttribute="top" secondItem="mjB-Tj-0nS" secondAttribute="bottom" constant="74" id="J0p-L9-pEF"/>
+                            <constraint firstItem="mjB-Tj-0nS" firstAttribute="leading" secondItem="DMg-Xt-HJd" secondAttribute="leading" constant="104" id="QOV-pP-9Ft"/>
+                            <constraint firstItem="mjB-Tj-0nS" firstAttribute="top" secondItem="yUg-TT-rWD" secondAttribute="bottom" constant="25" id="dd9-Hc-mqZ"/>
+                            <constraint firstItem="UVa-yu-uDs" firstAttribute="leading" secondItem="DMg-Xt-HJd" secondAttribute="leading" constant="139" id="eB8-0V-b5b"/>
+                            <constraint firstItem="yUg-TT-rWD" firstAttribute="top" secondItem="DMg-Xt-HJd" secondAttribute="top" constant="2" id="fXs-4C-No0"/>
+                            <constraint firstItem="DMg-Xt-HJd" firstAttribute="trailing" secondItem="r6J-Ai-4Gv" secondAttribute="trailing" constant="113" id="hA6-E0-LGj"/>
+                            <constraint firstItem="yUg-TT-rWD" firstAttribute="leading" secondItem="DMg-Xt-HJd" secondAttribute="leading" constant="2" id="nEg-eH-7QC"/>
+                            <constraint firstItem="r6J-Ai-4Gv" firstAttribute="leading" secondItem="DMg-Xt-HJd" secondAttribute="leading" constant="112" id="sSO-rJ-jcG"/>
+                            <constraint firstItem="DMg-Xt-HJd" firstAttribute="trailing" secondItem="UVa-yu-uDs" secondAttribute="trailing" constant="139" id="uNF-gN-x5e"/>
+                            <constraint firstItem="DMg-Xt-HJd" firstAttribute="trailing" secondItem="mjB-Tj-0nS" secondAttribute="trailing" constant="105" id="wqI-gS-WIw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DMg-Xt-HJd"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageQrCode" destination="r6J-Ai-4Gv" id="fVa-vi-fS7"/>
+                        <outlet property="inputText" destination="yUg-TT-rWD" id="2dh-is-DB3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ATH-hp-JvL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-415.19999999999999" y="-291.00449775112446"/>
+        </scene>
+    </scenes>
+</document>
